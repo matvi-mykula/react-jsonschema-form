@@ -1,5 +1,7 @@
-import { FormContextType, IconButtonProps, RJSFSchema, StrictRJSFSchema, TranslatableString } from '@rjsf/utils';
-import { Button, ButtonProps } from 'primereact/button';
+import type { FormContextType, IconButtonProps, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { TranslatableString } from '@rjsf/utils';
+import type { ButtonProps } from 'primereact/button';
+import { Button } from 'primereact/button';
 
 export type PrimeIconButtonProps<
   T = any,

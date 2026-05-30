@@ -1,6 +1,6 @@
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faCopy, faArrowDown, faArrowUp, faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { FormContextType, IconButtonProps, RJSFSchema, StrictRJSFSchema, TranslatableString } from '@rjsf/utils';
+import type { FormContextType, IconButtonProps, RJSFSchema, StrictRJSFSchema } from '@rjsf/utils';
+import { TranslatableString } from '@rjsf/utils';
 
 import DaisyUIButton from './DaisyUIButton';
 
@@ -10,9 +10,7 @@ export function CopyButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F e
   const {
     registry: { translateString },
   } = props;
-  return (
-    <DaisyUIButton title={translateString(TranslatableString.CopyButton)} {...props} icon={faCopy as IconDefinition} />
-  );
+  return <DaisyUIButton title={translateString(TranslatableString.CopyButton)} {...props} icon={faCopy} />;
 }
 
 export function MoveDownButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F extends FormContextType = any>(
@@ -21,13 +19,7 @@ export function MoveDownButton<T = any, S extends StrictRJSFSchema = RJSFSchema,
   const {
     registry: { translateString },
   } = props;
-  return (
-    <DaisyUIButton
-      title={translateString(TranslatableString.MoveDownButton)}
-      {...props}
-      icon={faArrowDown as IconDefinition}
-    />
-  );
+  return <DaisyUIButton title={translateString(TranslatableString.MoveDownButton)} {...props} icon={faArrowDown} />;
 }
 
 export function MoveUpButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F extends FormContextType = any>(
@@ -36,13 +28,7 @@ export function MoveUpButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F
   const {
     registry: { translateString },
   } = props;
-  return (
-    <DaisyUIButton
-      title={translateString(TranslatableString.MoveUpButton)}
-      {...props}
-      icon={faArrowUp as IconDefinition}
-    />
-  );
+  return <DaisyUIButton title={translateString(TranslatableString.MoveUpButton)} {...props} icon={faArrowUp} />;
 }
 
 export function RemoveButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F extends FormContextType = any>(
@@ -56,7 +42,7 @@ export function RemoveButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F
       title={translateString(TranslatableString.RemoveButton)}
       {...props}
       iconType='danger'
-      icon={faTrash as IconDefinition}
+      icon={faTrash}
     />
   );
 }
@@ -73,7 +59,7 @@ export function ClearButton<T = any, S extends StrictRJSFSchema = RJSFSchema, F 
       title={translateString(TranslatableString.ClearButton)}
       {...props}
       iconType='default'
-      icon={faXmark as IconDefinition}
+      icon={faXmark}
     />
   );
 }
